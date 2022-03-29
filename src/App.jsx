@@ -1,10 +1,16 @@
 import './styles/main.scss';
+import Hero from './Components/Hero/Hero';
+import Filter from './Components/Filter/Filter';
+import MovieList from './Adapters/MovieList';
 
 function App() {
+
   return (
-    <div className="App">
-      <h1 class="text-[32px] font-bold">Hello World!</h1>
-    </div>
+    <>
+      <Hero title='Hello'/>
+      <Filter />
+      <MovieList />
+    </>
   );
 }
 
