@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <Hero title='Hello'/>
+      <Hero title='Top 100 Movies of all time'/>
       <Filter />
       <MovieList />
     </>
