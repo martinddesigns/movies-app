@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { BsFillFilterSquareFill } from "react-icons/bs";
+import React, { useState } from 'react';
 
 export default function Filter(props) {
 
@@ -12,15 +11,20 @@ export default function Filter(props) {
   }
 
   return (
-    <section className="py-[15px] flex sm:flex-row flex-col justify-center items-center">
-      <label className='opacity-50' htmlFor="search">Type something</label>
+    <section className="py-[30px] relative flex sm:flex-row flex-col justify-center items-center">
+      <label className='opacity-50' htmlFor="search">Search</label>
       <input 
       className='border-2 rounded sm:mx-[10px] mx-0 sm:my-0 my-[10px] py-[5px] px-[10px] focus:outline-black' 
       type="text" 
       name="search"
       onChange={startSearch}
       />
-      <a href="#"><BsFillFilterSquareFill className='h-[38px] w-[38px] opacity-50 hover:opacity-100 hover:ease-in-out duration-200'/></a>
+      <label className='opacity-50' htmlFor="sort">Sort by</label>
+      <select onChange={(e) => props.sort(e.target.value)} className='border-[2px] ml-0 sm:ml-[10px] rounded relative h-[41px]' name="sort">
+        <option selected disabled></option>
+        <option value="name">Name</option>
+        <option value="rank">Rank</option>
+      </select>
     </section>
   )
 }

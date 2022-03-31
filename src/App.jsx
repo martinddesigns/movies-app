@@ -8,6 +8,7 @@ import { useState } from 'react';
 function App() {
   const [result, setResult] = useState('');
   const [loader, setLoader] = useState(false);
+  const [sort, setSort] = useState('');
 
   const getInput = (search) => {
     setResult(search)
@@ -17,11 +18,15 @@ function App() {
     setLoader(isLoading);
   }
 
+  const sortBy = (value) => {
+    setSort(value)
+  }
+
   return (
     <>
       <Hero title='Top 100 Movies of all time'/>
-      <Filter startSearch={getInput} changeLoader={changeLoader} />
-      <MovieList movieSearch={result} loader={loader} />
+      <Filter startSearch={getInput} changeLoader={changeLoader} sort={sortBy} />
+      <MovieList movieSearch={result} loader={loader} sort={sort} />
     </>
   );
 }
