@@ -4,11 +4,12 @@ import { BsFillFilterSquareFill } from "react-icons/bs";
 export default function Filter(props) {
 
   const startSearch = (e) => {
+    props.changeLoader(true);
     setTimeout(() => {
+      props.changeLoader(false);
       props.startSearch(e.target.value);
     }, 1000);
   }
-  
 
   return (
     <section className="py-[15px] flex sm:flex-row flex-col justify-center items-center">
