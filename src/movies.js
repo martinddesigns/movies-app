@@ -510,3 +510,7 @@ export const Movies = [
     "id": "tt0097576"
   }
 ]
+
+export function getMovieId(id) {
+  return Movies.find(movie => movie.id === id)
+}
