@@ -24,6 +24,32 @@ module.exports = {
       container: {
         center: true,
         padding: '15px'
+      },
+      keyframes: {
+        appear: {
+          '0%': {
+            opacity: '0.5'},
+          '100%': {
+            opacity: '1'
+          },
+          '0': {
+            width: '0'
+          }
+        },
+        wide: {
+          '0%': {
+            width: '0',
+            opacity: '0'
+          },
+          '100%': {
+            width: '200px',
+            opacity: '1'
+          }
+        },
+      },
+      animation: {
+        appear: 'appear 0.2s ease-in-out infinite alternate-reverse',
+        wide: 'wide 0.5s ease-in-out',
       }
     },
   },

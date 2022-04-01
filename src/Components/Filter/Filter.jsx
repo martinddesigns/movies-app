@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 export default function Filter(props) {
 
   const startSearch = (e) => {
-    props.changeLoader(true);
+      props.changeLoader(true);
     setTimeout(() => {
       props.changeLoader(false);
       props.startSearch(e.target.value);

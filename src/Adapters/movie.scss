@@ -1,0 +1,46 @@
+.movie-enter,
+.movie-appear {
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: 0.5s all ease-in-out;
+}
+
+.movie-enter-active,
+.movie-appear-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 0.5s all ease-in-out;
+}
+
+.movie-exit {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: 0.5s all ease-in-out;
+}
+
+.movie-exit-active {
+  opacity: 0;
+  transition: all .5s ease-in-out;
+  transform: translateX(50%);
+}
+
+// .movie-appear,
+// .movie-enter {
+//   opacity: 0;
+//   transition: opacity 2s ease-in;
+// }
+
+// .movie-appear.movie-appear-active,
+// .movie-enter.movie-enter-active {
+//   opacity: 1;
+//   transition: opacity 2s ease-in;
+// }
+
+// .movie-leave {
+//   opacity: 1;
+// }
+
+// .movie-leave.movie-leave-active {
+//   opacity: 0.01;
+//   transition: opacity 300ms ease-in;
+// }

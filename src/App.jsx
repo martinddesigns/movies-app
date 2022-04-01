@@ -11,7 +11,7 @@ function App() {
   const [sort, setSort] = useState('');
 
   const getInput = (search) => {
-    setResult(search)
+      setResult(search)
   }
 
   const changeLoader = (isLoading) => {
